@@ -8,28 +8,28 @@ import java.util.regex.Pattern;
 public class BigNum {
 
     public static void main(String[] args) throws IOException {
-        while (true) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("--------------------\n请选择方式:");
-            System.out.println("1.手动输入\n2.从文件读取\n0.退出系统\n--------------------");
-            String choice = sc.nextLine();
-            switch (choice) {
-                case "1":
-                    arithmetic();
-                    break;
-                case "2":
-                    arithmeticByFile();
-                    break;
-                case "0":
-                    break;
-                default:
-                    System.out.println("非法输入，请重试！");
-            }
-            if (choice.equals("0")) {
-                break;
-            }
-        }
-
+//        mySqrt("25");
+//        while (true) {
+//            Scanner sc = new Scanner(System.in);
+//            System.out.println("--------------------\n请选择方式:");
+//            System.out.println("1.手动输入\n2.从文件读取\n0.退出系统\n--------------------");
+//            String choice = sc.nextLine();
+//            switch (choice) {
+//                case "1":
+//                    arithmetic();
+//                    break;
+//                case "2":
+//                    arithmeticByFile();
+//                    break;
+//                case "0":
+//                    break;
+//                default:
+//                    System.out.println("非法输入，请重试！");
+//            }
+//            if (choice.equals("0")) {
+//                break;
+//            }
+//        }
     }
 
 
@@ -533,5 +533,25 @@ public class BigNum {
         }
         return num;
     }
+
+
+//    /**
+//     * d大整数求平方根
+//     * @param x
+//     * @return
+//     */
+//    private static String mySqrt(String x) {
+//        String x0 = x;
+//        x0 = add(division(x0,"2"),division(x,mul("2",x0)));
+//        String min = x;
+//        while (subtract(subtract(mul(add(division(x0,"2"),division(x,mul("2",x0))),add(division(x0,"2"),division(x,mul("2",x0)))), x),min).charAt(0) == '-'){
+//            x0 = add(division(x0,"2"),division(x,mul("2",x0)));
+//            min = subtract(mul(x0,x0), x);
+//        }
+////        while(Math.abs(x0*x0-t)>0.00001)
+////            x0=x0/2+t/(2*x0);
+//        System.out.println(x0);
+//        return x0;//double 转int类型必须使用强制类型转化
+//    }
 
 }
